@@ -4,14 +4,26 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+const {
+  VITE_FIREBASE_API_KEY,
+  VITE_FIREBASE_AUTH_DOMAIN,
+  VITE_FIREBASE_PROJECT_ID,
+  VITE_FIREBASE_STORAGE_BUCKET,
+  VITE_FIREBASE_MESSAGING_SENDER_ID,
+  VITE_FIREBASE_APP_ID,
+  VITE_FIREBASE_MEASUREMENT_ID,
+  VITE_FIREBASE_DATABASE_URL,
+} = import.meta.env;
+
 const firebaseConfig = {
-  apiKey: "AIzaSyAtFrsqiuex4CPtDYcIethF4-d0OfI-Eg0",
-  authDomain: "scrumpoker-af8d2.firebaseapp.com",
-  databaseURL: "https://scrumpoker-af8d2-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "scrumpoker-af8d2",
-  storageBucket: "scrumpoker-af8d2.appspot.com",
-  messagingSenderId: "825805097018",
-  appId: "1:825805097018:web:512db1559c38a02ab94d03"
+  apiKey: VITE_FIREBASE_API_KEY,
+  authDomain: VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: VITE_FIREBASE_PROJECT_ID,
+  storageBucket: VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: VITE_FIREBASE_APP_ID,
+  measurementId: VITE_FIREBASE_MEASUREMENT_ID,
+  databaseURL: VITE_FIREBASE_DATABASE_URL,
 };
 
 // Initialize Firebase
